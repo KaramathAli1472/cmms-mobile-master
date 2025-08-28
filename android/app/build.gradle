@@ -1,0 +1,76 @@
+
+
+plugins {
+    id "com.android.application" 
+    id "kotlin-android"
+    id "com.google.gms.google-services" // Custom - Firebase plugin
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+// Load key.properties file
+def keyProperties = new Properties()
+def keyPropertiesFile = rootProject.file("key.properties")
+if (keyPropertiesFile.exists()) {
+    keyProperties.load(new FileInputStream(keyPropertiesFile))
+}
+
+android {
+    namespace = "com.maintboard.cmms"
+    compileSdk = flutter.compileSdkVersion
+    // ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    ndkVersion = "27.0.12077973"
+
+    defaultConfig {
+        applicationId = "com.maintboard.cmms"
+        minSdk = 23
+        targetSdk = flutter.targetSdkVersion
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    /// ToDo: We only to enable when we are publishing
+    // signingConfigs {
+    //     release {
+    //         storeFile file(keyProperties['storeFile'])
+    //         storePassword keyProperties['storePassword']
+    //         keyAlias keyProperties['keyAlias']
+    //         keyPassword keyProperties['keyPassword']
+    //     }
+    // }
+
+    buildTypes {
+        release {
+            // Ensure debuggable is false
+            debuggable false
+
+            // Enable code shrinking and optimization
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            /// ToDo: We only to enable when we are publishing
+            // Use release signing config
+            // signingConfig signingConfigs.release
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
+// Custom - Added to receive FCM notifications
+dependencies {
+    implementation 'com.google.firebase:firebase-messaging:24.1.0' // Check for latest version
+}

@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "priorityID": 1,
+      "priorityName": "Critical",
+      "icon": "mdi-alert-circle",
+      "color": "error"
+    },
+    {
+      "priorityID": 2,
+      "priorityName": "High",
+      "icon": "mdi-signal-cellular-3",
+      "color": "warning"
+    },
+    {
+      "priorityID": 3,
+      "priorityName": "Medium",
+      "icon": "mdi-signal-cellular-2",
+      "color": "info"
+    },
+    {
+      "priorityID": 4,
+      "priorityName": "Low",
+      "icon": "mdi-signal-cellular-1",
+      "color": "success"
+    }
+  ]
+}

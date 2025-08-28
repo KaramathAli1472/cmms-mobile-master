@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "753579720706",
+    "firebase_url": "https://maintboard-com-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "maintboard-com",
+    "storage_bucket": "maintboard-com.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:753579720706:android:17d885607fb6f30edaa71b",
+        "android_client_info": {
+          "package_name": "com.maintboard.cmms"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXT0YfSemINx3Ht2iAutY1iLhDIzFdMWw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
