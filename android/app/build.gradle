@@ -1,9 +1,7 @@
-
-
 plugins {
-    id "com.android.application" 
+    id "com.android.application"
     id "kotlin-android"
-    id "com.google.gms.google-services" // Custom - Firebase plugin
+    id "com.google.gms.google-services" // Firebase plugin
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id "dev.flutter.flutter-gradle-plugin"
 }
@@ -39,16 +37,6 @@ android {
         versionName = flutter.versionName
     }
 
-    /// ToDo: We only to enable when we are publishing
-    // signingConfigs {
-    //     release {
-    //         storeFile file(keyProperties['storeFile'])
-    //         storePassword keyProperties['storePassword']
-    //         keyAlias keyProperties['keyAlias']
-    //         keyPassword keyProperties['keyPassword']
-    //     }
-    // }
-
     buildTypes {
         release {
             // Ensure debuggable is false
@@ -58,10 +46,6 @@ android {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-
-            /// ToDo: We only to enable when we are publishing
-            // Use release signing config
-            // signingConfig signingConfigs.release
         }
     }
 }

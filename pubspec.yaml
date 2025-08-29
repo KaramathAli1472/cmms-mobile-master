@@ -41,6 +41,10 @@ dependencies:
   speech_to_text: ^7.1.0
   mobile_scanner: ^7.0.1
 
+
+
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -64,6 +68,7 @@ flutter:
   assets:
     - assets/jsons/priorities.json
     - assets/images/logo.png
+    - assets/images/icons/pana_icon.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:

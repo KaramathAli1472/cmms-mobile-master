@@ -229,7 +229,14 @@ class HomeScreenState extends State<HomeScreen> {
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         items: [
-          BottomNavigationBarItem(icon: _buildNavIcon(context, 0, Icons.dashboard_outlined), label: 'Overview'),
+          BottomNavigationBarItem(
+            icon: Container(
+              width: 30,
+              height: 30,
+              child: Image.asset('assets/images/icons/pana_icon.png'), // ✅ apni image
+            ),
+            label: 'Overview',
+          ),
           BottomNavigationBarItem(icon: _buildNavIcon(context, 1, Icons.assignment_outlined), label: 'Orders'),
           BottomNavigationBarItem(icon: _buildNavIcon(context, 2, Icons.campaign_outlined), label: 'Requests'),
           const BottomNavigationBarItem(icon: Icon(Icons.qr_code_scanner_outlined), label: 'Scan'),
